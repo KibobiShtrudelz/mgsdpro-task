@@ -1,0 +1,20 @@
+$white: var(--color-white, #fff);
+$buttonPrimary: var(--color-button-primary, #2e63f6);
+$buttonShadow: var(--color-button-box-shadow, rgba(0, 0, 0, 0.1));
+
+button {
+  color: $white;
+  font-weight: 600;
+  padding: 16px 32px;
+  border-radius: 4px;
+  outline: 1px $buttonPrimary;
+  border: 1px solid $buttonPrimary;
+  background-color: $buttonPrimary;
+  box-shadow: 0 0 10px 0 $buttonShadow;
+  width: 200px;
+
+  &.disabled {
+    opacity: 0.75;
+    pointer-events: none;
+  }
+}

@@ -1,0 +1,40 @@
+$animationDelay: 2000ms;
+$animationDuration: 1000ms;
+$white: var(--color-white, #fff);
+$waterLevel: var(--color-water-level, #0011ff);
+
+.waterLevel {
+  display: grid;
+  place-items: center;
+
+  height: 20px;
+  color: $white;
+  background-color: $waterLevel;
+
+  &.increase {
+    animation: waterLevelRise $animationDuration forwards;
+  }
+
+  &.decrease {
+    animation-delay: $animationDelay;
+    animation: waterLevelDecrease $animationDuration forwards;
+  }
+}
+
+@keyframes waterLevelRise {
+  from {
+    height: 0;
+  }
+  to {
+    height: 20px;
+  }
+}
+
+@keyframes waterLevelDecrease {
+  from {
+    height: 20px;
+  }
+  to {
+    height: 0;
+  }
+}
