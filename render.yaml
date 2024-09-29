@@ -1,6 +1,10 @@
 services:
   - type: web
     name: bathtub-app
-    env: static
+    env: node
+    plan: free
     buildCommand: npm run build
-    publishPath: ./dist
+    startCommand: npm start
+    build:
+      publishPath: ./dist
+      command: npm run build
