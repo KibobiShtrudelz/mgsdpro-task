@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: my-vite-app
+    name: bathtub-app
     env: static
     buildCommand: npm run build
     publishPath: ./dist
